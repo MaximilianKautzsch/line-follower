@@ -53,7 +53,7 @@ class Motor {
 Motor motorLeft(MOTOR_LEFT_FORWARD_PIN, MOTOR_LEFT_BACKWARD_PIN);
 Motor motorRight(MOTOR_RIGHT_FORWARD_PIN, MOTOR_RIGHT_BACKWARD_PIN);
 
-void rotate(int leftMotorSpeed, int rightMotorSpeed) {
+void drive(int leftMotorSpeed, int rightMotorSpeed) {
   motorLeft.setSpeed(leftMotorSpeed);
   motorRight.setSpeed(rightMotorSpeed);
 }
