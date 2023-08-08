@@ -8,47 +8,57 @@ const int WHITE_MIN = 0;
 const int WHITE_MAX = 200;
 
 // Get minimum and maximum values of thresholds
-int thresholds[] = { WHITE_MIN, WHITE_MAX, BLACK_MIN, BLACK_MAX };
+int thresholds[] = {WHITE_MIN, WHITE_MAX, BLACK_MIN, BLACK_MAX};
 
-for (int i = 0; i <= sizeof(thresholds); i++) {
+for (int i = 0; i <= sizeof(thresholds); i++)
+{
   unsigned int minimumValue = min(thresholds[i], minimumValue);
 
   return minimumValue;
 }
-for (int i = 0; i <= sizeof(thresholds); i++) {
+for (int i = 0; i <= sizeof(thresholds); i++)
+{
   unsigned int maximumValue = max(thresholds[i], maximumValue);
 
   return maximumValue;
 }
 
 //-------------------- CLASS FOR LIGHT SENSOR --------------------
-class LightSensor {
+class LightSensor
+{
 public:
-  LightSensor(int sensorPin) {
+  LightSensor(int sensorPin)
+  {
     pinMode(sensorPin, INPUT);
   }
 
   //-------------------- GETTING ANALOG SIGNAL --------------------
-  void getAnalogSignal() {
+  void getAnalogSignal() 
+  {
     static unsigned long temporaryValue;
-    
+
     // read digital signal from input pin
-    if (millis() > temporaryValue + 10) {
+    if (millis() > temporaryValue + 10)
+    {
       int analogSignal = analogRead(sensorPin);
-      analogSignal = constrain(analogSignal, minimumValue, maximumValue);  
+      analogSignal = constrain(analogSignal, minimumValue, maximumValue);
     }
 
     return analogSignal;
   }
 
   //-------------------- GETTING COLOR --------------------
-  void getColor() {
+  void getColor()
+  {
     char color;
 
     // convert signal to color
-    if (BLACK_MIN <= analogSignal && analogSignal <= BLACK_MAX) {
+    if (BLACK_MIN <= analogSignal && analogSignal <= BLACK_MAX)
+    {
       color = "black";
-    } else if (WHITE_MIN <= analogSignal && analogSignal <= WHITE_MAX) {
+    }
+    else if (WHITE_MIN <= analogSignal && analogSignal <= WHITE_MAX)
+    {
       color = "white";
     }
 
