@@ -10,7 +10,7 @@ Source code for robot that can follow a black line using a PID controller.
 | ------------------------------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `setSpeed(int speed)`                            | none                | Set the speed value to control the absolute value and direction of the robots velocity with PWM. Value from -100 to 100. |
 | `stop()`                                         | none                | Stop the motor.                                                                                                          |
-| `getSpeed()`                                     | speed               | Get the current speed of the motor.                                                                                      |
+| `getSpeed()`                                     | int speed               | Get the current speed of the motor.                                                                                      |
 | `drive(int leftMotorSpeed, int rightMotorSpeed)` | none                | Drive the robot by controlling both motors at once.                                                                      |
 
 ### Light Sensor
