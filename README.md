@@ -1,12 +1,12 @@
-# Line Follower &middot; ![Project Status](https://img.shields.io/badge/project_status-open-green) [![Feedback is welcome](https://img.shields.io/badge/feedback-welcome-green)](https://github.com/MaximilianKautzsch) [![GitHub License](https://img.shields.io/github/license/MaximilianKautzsch/line-follower?color=blue)](https://github.com/MaximilianKautzsch/line-follower/blob/main/LICENSE)
+# Line Follower &middot; ![Project Status](https://img.shields.io/badge/project_status-building-cyan) [![Feedback is welcome](https://img.shields.io/badge/feedback-welcome-green)](https://github.com/MaximilianKautzsch) [![GitHub License](https://img.shields.io/github/license/MaximilianKautzsch/line-follower?color=blue)](https://github.com/MaximilianKautzsch/line-follower/blob/main/LICENSE)
 
 Source code for robot that can follow a black line using a PID controller.
 
 **To-Do's:**
 
-- [ ] Finish program
-- [ ] Test out robot
-- [ ] Finish documentation
+- [ ] Finish program and test robot
+- [ ] Fix bugs til program is finally complete
+- [ ] Create schematic diagram in `docs` directory and finish documentation
 - [ ] Set project status to closed
 - [ ] Upload all programs with submodules as one .zip file into the `src/main` directory
 
