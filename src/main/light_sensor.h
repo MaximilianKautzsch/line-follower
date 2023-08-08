@@ -30,9 +30,13 @@ public:
 
   //-------------------- GETTING ANALOG SIGNAL --------------------
   void getAnalogSignal() {
+    static unsigned long temporaryValue;
+    
     // read digital signal from input pin
-    int analogSignal = analogRead(sensorPin);
-    analogSignal = constrain(analogSignal, minimumValue, maximumValue);
+    if (millis() > temporaryValue + 10) {
+      int analogSignal = analogRead(sensorPin);
+      analogSignal = constrain(analogSignal, minimumValue, maximumValue);  
+    }
 
     return analogSignal;
   }
