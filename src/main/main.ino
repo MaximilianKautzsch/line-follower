@@ -7,15 +7,18 @@ const float proportionalConstant = 1;
 const float integralConstant = 1;
 const float derivativeConstant = 1;
 
-void setup() {
+void setup()
+{
   return;
 }
 
-void loop() {
+void loop()
+{
   followLine();
 }
 
-void followLine() {
+void followLine()
+{
   int error = sensorLeft.getAnalogSignal() - sensorRight.getAnalogSignal();
 
   proportionalTerm = error;
