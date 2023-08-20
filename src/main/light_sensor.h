@@ -4,13 +4,15 @@
 #include <Arduino.h>
 
 //-------------------- CLASS FOR LIGHT SENSOR --------------------
-class LightSensor {
+class LightSensor
+{
 private:
   int pin;
   int blackMin;
   int blackMax;
   int whiteMin;
   int whiteMax;
+
 public:
   LightSensor(int pin);
   int getAnalogSignal();

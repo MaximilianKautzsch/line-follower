@@ -1,17 +1,21 @@
 #include "light_sensor.h"
 
-LightSensor::LightSensor(int pin) {
+LightSensor::LightSensor(int pin)
+{
   this->pin = pin;
   pinMode(this->pin, INPUT);
 }
 
 //-------------------- GETTING ANALOG SIGNAL --------------------
-int LightSensor::getAnalogSignal() {
+int LightSensor::getAnalogSignal()
+{
   static unsigned long temporaryValue;
   int analogSignal;
 
   // read digital signal from input pin
-  if (millis() > temporaryValue + 10) {
+  if (millis() > temporaryValue + 10)
+  {
+    temporaryValue = millis();
     analogSignal = analogRead(pin);
   }
 
@@ -19,7 +23,8 @@ int LightSensor::getAnalogSignal() {
 }
 
 //-------------------- GETTING COLOR --------------------
-char LightSensor::getColor(int blackMin, int blackMax, int whiteMin, int whiteMax) {
+char LightSensor::getColor(int blackMin, int blackMax, int whiteMin, int whiteMax)
+{
   this->blackMin = blackMin;
   this->blackMax = blackMax;
   this->whiteMin = whiteMin;
@@ -28,9 +33,12 @@ char LightSensor::getColor(int blackMin, int blackMax, int whiteMin, int whiteMa
   char color;
 
   // convert signal to color
-  if (blackMin <= getAnalogSignal() && getAnalogSignal() <= blackMax) {
+  if (blackMin <= getAnalogSignal() && getAnalogSignal() <= blackMax)
+  {
     color = 'b';
-  } else if (whiteMin <= getAnalogSignal() && getAnalogSignal() <= whiteMax) {
+  }
+  else if (whiteMin <= getAnalogSignal() && getAnalogSignal() <= whiteMax)
+  {
     color = 'w';
   }
 

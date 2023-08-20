@@ -4,11 +4,13 @@
 #include <Arduino.h>
 
 //-------------------- CLASS FOR DC MOTOR --------------------
-class Motor {
+class Motor
+{
 private:
   int forwardPin;
   int backwardPin;
   int speed;
+
 public:
   Motor(int forwardPin, int backwardPin);
   void setSpeed(int speed);
